@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-
+//Quando a gente marca ele mostra o valor e a quantidade de itens selecionados
         binding.checkPizza.setOnClickListener {
             if(binding.checkPizza.isChecked()){
                 binding.editQuantidadePizza.setText("1")
