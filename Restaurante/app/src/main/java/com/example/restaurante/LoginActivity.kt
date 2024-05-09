@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.restaurante.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
-//Criação da variável binding que servirá para manipular a tela.
+//Criação da variável binding que servirá para fazer a tela de login do app do restaurante.
     private lateinit var binding:ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
             val username = binding.editUsername.text.toString().trim()
             val password = binding.editPassword.text.toString().trim()
 
+            //Define um valor as variáveis, além de criar uma condição (o se)
             if (username.equals("abc") && password.equals("123")) {
                 val i = Intent(this, MainActivity::class.java)
                 i.putExtra("username", username)
