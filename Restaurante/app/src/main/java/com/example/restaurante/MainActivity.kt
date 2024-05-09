@@ -7,26 +7,28 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.restaurante.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+//Tela principal do aplicativo do restaurante
     private lateinit var binding:ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
-
+//Mostra o layout na tela principal
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
+//Define a variável
         val username = intent.extras?.getString("username")
 
+//Cria a condição SE, que irá dar olá para o usuário
         if(!username.isNullOrEmpty()){
             binding.textOla.setText("Olá $username")
         }
-
+//Vai fechar o aplicativo quando clicarmos no botão
         binding.buttonFechar.setOnClickListener {
             finishAffinity()
         }
 
+//Marca ou desmarca a seleção do cliente dos itens do menu
         binding.buttonPedir.setOnClickListener {
             val i = Intent(this, SplashActivity::class.java)
             i.putExtra("quantidadePizza", binding.editQuantidadePizza.text.toString())
