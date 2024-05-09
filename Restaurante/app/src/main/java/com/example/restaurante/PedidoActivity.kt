@@ -10,12 +10,14 @@ class PedidoActivity : AppCompatActivity() {
         binding = ActivityPedidoBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
+        
+//Está atribuindo um valor as variáveis
         val i = intent
         val quantidadePizza = i.getStringExtra("quantidadePizza").toString().toInt()
         val quantidadeSalada = i.getStringExtra("quantidadeSalada").toString().toInt()
         val quantidadeHamburguer = i.getStringExtra("quantidadeHamburguer").toString().toInt()
 
+//Está sendo incluído a quantidade dos itens do cardápio e como o preço será calculado.
         val texto = "Resumo do Pedido\n" +
                 "Pizza: $quantidadePizza Preço: ${quantidadePizza*8}\n" +
                 "Salada: $quantidadeSalada Preço: ${quantidadeSalada*10}\n" +
